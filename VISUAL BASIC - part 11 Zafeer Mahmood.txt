@@ -34,7 +34,7 @@ Module Module1
         Console.Write("Enter String: ")
         str1 = Console.ReadLine()
 
-        find1 = InStr(str1, " not ")
+        find1 = InStr(str1, " not")
         find2 = InStr(str1, " bad")
 
         If find2 > find1 Then
