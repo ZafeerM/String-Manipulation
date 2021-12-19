@@ -28,7 +28,7 @@ find2 ← 0
 
 input ("Enter String: ",str1)
 
-find1 ← LOCATE (str1, " not ")
+find1 ← LOCATE (str1, " not")
 find2 ← LOCATE (str1, " bad")
 
 if find2 > find1 then
