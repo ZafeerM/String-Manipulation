@@ -1,0 +1,74 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+5. Find the count of vowels characters in an entered string separately.
+
+------------------------------------
+//Visualbasic
+------------------------------------
+
+Module Module1
+
+    Sub Main()
+        'declaration 
+        Dim str1 As String
+        Dim i As Integer
+        Dim eachchar As Char
+        Dim vowela As Integer
+        Dim vowele As Integer
+        Dim voweli As Integer
+        Dim vowelo As Integer
+        Dim vowelu As Integer
+        Dim totalvowels As Integer
+
+        'intialization
+        str1 = ""
+        i = 0
+        eachchar = ""
+        vowela = 0
+        vowele = 0
+        voweli = 0
+        vowelo = 0
+        vowelu = 0
+        totalvowels = 0
+
+        Console.Write("Enter String: ")
+        str1 = Console.ReadLine()
+
+        For i = 1 To Len(str1)
+            eachchar = Mid(str1, i, 1)
+            If eachchar = "a" Then
+                vowela = vowela + 1
+            ElseIf eachchar = "e" Then
+                vowele = vowele + 1
+            ElseIf eachchar = "i" Then
+                voweli = voweli + 1
+            ElseIf eachchar = "o" Then
+                vowelo = vowelo + 1
+            ElseIf eachchar = "u" Then
+                vowelu = vowelu + 1
+            End If
+        Next i
+
+        totalvowels = vowela + vowele + voweli + vowelo + vowelu
+
+        'output 
+        Console.WriteLine("number of vowel a:" & vowela)
+        Console.WriteLine("number of vowel e:" & vowele)
+        Console.WriteLine("number of vowel i:" & voweli)
+        Console.WriteLine("number of vowel o:" & vowelo)
+        Console.WriteLine("number of vowel u:" & vowelu)
+        Console.WriteLine("(Extra) number of total vowels: " & totalvowels)
+
+        Console.ReadKey()
+
+    End Sub
+
+End Module
+
+
+
+
+
+

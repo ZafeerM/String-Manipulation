@@ -1,0 +1,64 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+4. Find the character that appears most number of times in an entered string and output it.
+
+------------------------------------
+//Visualbasic
+------------------------------------
+Module Module1
+
+    Sub Main()
+        'declaration 
+        Dim str1 As String
+        Dim i As Integer
+        Dim eachchar As Char
+        Dim y As Integer
+        Dim eachchar2 As Char
+        Dim charcount As Integer
+        Dim maxcharvalue As Integer
+        Dim maxchar As Char
+
+        'intialization 
+        str1 = ""
+        i = 0
+        eachchar = ""
+        y = 0
+        eachchar2 = ""
+        charcount = 0
+        maxcharvalue = 0
+        maxchar = ""
+
+        Console.Write("Enter String: ")
+        str1 = Console.ReadLine()
+
+        For i = 1 To Len(str1)
+            eachchar = Mid(str1, i, 1)
+            For y = 1 To Len(str1)
+                eachchar2 = Mid(str1, y, 1)
+                If eachchar = eachchar2 Then
+                    charcount = charcount + 1
+                End If
+                If charcount > maxcharvalue Then
+                    maxcharvalue = charcount
+                    maxchar = eachchar
+                End If
+            Next
+            charcount = 0
+        Next
+
+        Console.WriteLine("Most repeated character: " & maxchar)
+        Console.WriteLine("(EXTRA) number of times repeated: " & maxcharvalue)
+
+        Console.ReadKey()
+
+    End Sub
+
+End Module
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+7.
+both_ends:
+Input a string s, output a string made of the first 2
+and the last 2 chars of the original string,
+so 'spring' yields 'spng'. However, if the string length
+is less than 2, return string s instead the empty string.
+
+------------------------------------
+//Pseudocode 
+------------------------------------
+//declaration 
+declare str1 as string 
+declare editstr as string 
+
+//initialization 
+str1 ← ""
+editstr ← ""
+
+input "Enter String to edit: ", str1 
+
+If len(str1) > 2 then 
+	editstr ← left (str1,2) & right (str1,2) 
+	output editstr
+else
+	output str1
+endif

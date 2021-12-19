@@ -1,0 +1,40 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+7.
+both_ends:
+Input a string s, output a string made of the first 2
+and the last 2 chars of the original string,
+so 'spring' yields 'spng'. However, if the string length
+is less than 2, return string s instead the empty string.
+
+------------------------------------
+//visualbasic 
+------------------------------------
+	
+Module Module1
+
+    Sub Main()
+        'declaration 
+        Dim str1 As String
+        Dim editstr As String
+
+        'intialization 
+        str1 = ""
+        editstr = ""
+
+        Console.Write("Enter string to edit: ")
+        str1 = Console.ReadLine()
+
+        If Len(str1) > 2 Then
+            editstr = Left(str1, 2) & Right(str1, 2)
+            Console.WriteLine(editstr)
+        Else
+            Console.WriteLine(str1)
+        End If
+        Console.ReadKey()
+    End Sub
+
+End Module
+		

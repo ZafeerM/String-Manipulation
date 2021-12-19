@@ -1,0 +1,40 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+6.
+donuts:
+INPUT an INT count of a number of donuts, OUTPUT a string
+of the form 'Number of donuts: <count>', where <count> is the number
+input. However, if the count is 10 or more, then use the word 'many'
+instead of the actual count.
+So donuts(5) outputs 'Number of donuts: 5'
+and donuts(23) outputs 'Number of donuts: many'
+
+------------------------------------
+//Visualbasic
+------------------------------------
+
+Module Module1
+
+    Sub Main()
+        'declaration 
+        Dim dqty As Integer
+
+        'initialize
+        dqty = 0
+
+        Console.Write("Enter donuts : ")
+        dqty = Console.ReadLine()
+
+        If dqty < 10 Then
+            Console.WriteLine("Number of donuts: " & dqty)
+        ElseIf dqty >= 10 Then
+            Console.WriteLine("Number of donuts: many")
+        End If
+
+        Console.ReadKey()
+     
+    End Sub
+
+End Module

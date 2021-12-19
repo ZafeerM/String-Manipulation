@@ -1,0 +1,53 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+2. Replace selected character with another in entered string.
+
+------------------------------------
+//visualbasic 
+------------------------------------
+	
+Module Module1
+
+    Sub Main()
+        'declaration 
+        Dim str1 As String
+        Dim chartochange As Char
+        Dim char1 As Char
+        Dim i As Integer
+        Dim eachchar As Char
+
+        'intialization
+        str1 = ""
+        chartochange = ""
+        char1 = ""
+        i = 0
+        eachchar = ""
+
+        'inputs
+        Console.Write("Enter String: ")
+        str1 = Console.ReadLine()
+
+        Console.Write("Enter Character to replace: ")
+        chartochange = Console.ReadLine()
+
+        Console.Write("Enter character to replace with: ")
+        char1 = Console.ReadLine()
+
+        For i = 1 To Len(str1)
+            eachchar = Mid(str1, i, 1)
+            If eachchar = chartochange Then
+                str1 = Mid(str1, 1, i - 1) & char1 & Mid(str1, i + 1, Len(str1))
+            End If
+        Next
+
+        Console.Write(str1)
+
+        Console.ReadKey()
+
+    End Sub
+
+End Module
+
+		

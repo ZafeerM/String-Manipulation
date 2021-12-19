@@ -1,0 +1,43 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+11.
+not_bad:
+Given a string, find the first appearance of the
+substring 'not' and 'bad'. If the 'bad' follows
+the 'not', replace the whole 'not'...'bad' substring
+with 'good'.
+Return the resulting string.
+Input: 'This dinner is not that bad!' 
+Outputs: This dinner is good!
+
+------------------------------------
+//Pseudocode 
+------------------------------------
+//declarations
+Declare str1 as string 
+Declare find1 as integer
+Declare find2 as integer
+Declare finalstr as string 
+
+//intialization 
+str1 ← ""
+find1 ← 0
+find2 ← 0
+
+input ("Enter String: ",str1)
+
+find1 ← LOCATE (str1, " not ")
+find2 ← LOCATE (str1, " bad")
+
+if find2 > find1 then
+	finalstr ← left (str1, find1) & "good" & MID (str1, find2+4, len(str))   
+	ouput finalstr
+else 
+	output ("Word 'bad' doesnot follows the word 'not' ")
+
+
+
+
+		

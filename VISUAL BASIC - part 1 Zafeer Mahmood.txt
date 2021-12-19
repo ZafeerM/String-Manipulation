@@ -1,0 +1,51 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+1. Find if the input string has all the alphabets (case neutral).
+
+--------------------------------
+//visual basic
+--------------------------------
+Module Module1
+
+    Sub Main()
+        'declare
+        Dim str1 As String
+        Dim i As Integer
+        Dim char1 As Char
+        Dim alphabets As String
+        Dim noalphabet As Integer
+
+        'intialization 
+        str1 = ""
+        i = 0
+        char1 = ""
+        alphabets = "abcdefghijklmnopqrstuvwxyz"
+        noalphabet = 0
+
+        Console.Write("Enter string to check: ")
+        str1 = Console.ReadLine
+        str1 = LCase(str1)
+
+        For i = 1 To Len(alphabets)
+            char1 = Mid(alphabets, i, 1)
+            If InStr(str1, char1) = 0 Then
+                noalphabet = 1
+            End If
+        Next
+
+        If noalphabet = 1 Then
+            Console.Write("String doesnot has all alphabets")
+        Else
+            Console.Write("String has all alphabets")
+        End If
+
+
+        Console.ReadKey()
+    End Sub
+
+End Module
+
+
+		

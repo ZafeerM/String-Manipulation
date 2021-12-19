@@ -1,0 +1,63 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+5. Find the count of vowels characters in an entered string separately.
+
+------------------------------------
+//Pseudocode 
+------------------------------------
+//declaration 
+Declare str1 as string 
+Declare i as integer
+Declare eachchar as char
+Declare vowela as integer
+Declare vowele as integer
+Declare voweli as integer
+Declare vowelo as integer
+Declare vowelu as integer
+Declare totalvowels as integer
+
+//intialization
+str1 ← ""
+i ← 0 
+eachchar ← ''
+vowela ← 0
+vowele ← 0
+voweli ← 0
+vowelo ← 0
+vowelu← 0
+totalvowels ← 0
+
+input ("Enter String: ",str1)
+str1 ← LOWER(str1)
+
+For i ← 1 to len(str1) 
+	eachchar ← MID (str1 ,i , 1)
+	if eachchar = "a" then
+		vowela = vowela + 1
+	elseif eachchar = "e" then 
+		vowele = vowele + 1 
+	elseif eachchar = "i" then 
+		voweli = voweli + 1
+	elseif eachchar = "o" then 
+		vowelo = vowelo + 1 
+	elseif eachchar = "u" then 
+		vowelu = vowelu + 1
+	endif
+next i
+
+totalvowels ← vowela + vowele + voweli + vowelo + vowelu
+
+//output
+output ("number of vowel a:", vowela)
+output ("number of vowel e:", vowele)
+output ("number of vowel i:", voweli)
+output ("number of vowel o:", vowelo)
+output ("number of vowel u:", vowelu)
+output("(Extra) number of total vowels: ",totalvowels)
+	
+
+
+
+

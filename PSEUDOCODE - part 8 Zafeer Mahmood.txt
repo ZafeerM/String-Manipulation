@@ -1,0 +1,40 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+8.
+fix_start:
+Given a string s, return a string
+where all occurences of its first char have
+been changed to '*', except do not change
+the first char itself.
+e.g., 'babble' yields 'ba**le' or 'alpha' outputs 'alph*'
+Assume that the string is length 1 or more
+
+------------------------------------
+//Pseudocode 
+------------------------------------
+//declarations 
+declare str1 as string 
+declare i as integer 
+declare eachchar as char
+
+//initalizations 
+str1 ← ""
+i ← 0
+eachchar ← ''
+
+input ("Enter String: ", str1 )
+
+For i ← 2 to len(str1) 
+	eachchar = MID (str1, i ,1)
+	if MID(str1, 1 ,1) = eachchar
+		str1 = MID (str1, 1, i-1) & "*" & MID (str1, i+1 , len(str1)) 
+	endif 
+Next
+
+Output str1	
+
+
+
+		

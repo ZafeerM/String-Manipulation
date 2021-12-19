@@ -1,0 +1,41 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+1. Find if the input string has all the alphabets (case neutral).
+
+-----------------------------------
+//pesuedo code 
+-----------------------------------
+//declarations 
+declare str1 : string 
+declare i : integer
+declare char1 : character
+declare alphabets : string
+declare noalphabet : string
+
+//intialization
+str1 ← ""
+char ← ''
+i ← 0
+alphabets ← "abcdefghijklmnopqrstuvwxyz"
+noalphabet ← 0
+
+input "Enter string to check: ", str1
+str1 ← LOWER (str1)
+
+For i ←  1 to len(alphabets)
+	char1 ← MID (alphabets,i,1)
+	if LOCATE (str1,char1) = 0 then 
+		noalphabet = 1
+Next i 
+
+if noalphabet = 1 then 
+	Output "String doesnot has all aplhabets"
+elseif 
+	Output "String has all alphabets"
+Endif 
+	 
+
+
+		

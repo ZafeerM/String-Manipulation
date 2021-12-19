@@ -1,0 +1,56 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+4. Find the character that appears most number of times in an entered string and output it.
+
+------------------------------------
+//Pseudocode 
+------------------------------------
+//declaration 
+Declare str1 as string 
+Declare i as integer 
+Declare eachchar as char
+Declare y as integer
+Declare eachchar2 as char 
+Declare charcount as integer
+Declare maxcharvalue as integer
+Declare maxchar as char
+
+//initialization 
+str1 ← ""
+i ← 0
+eachchar ← ''
+y ← 0
+eachchar2 ← ''
+charcount ← 0
+maxcharvalue ← 0
+maxchar ← ''
+
+input "Enter String: ", str1
+
+For i ← 1 to len(str1)
+	eachchar ← MID (str1 ,i, 1)
+	
+	For y ← 1 to len(str1) 
+		eachchar2 ← MID (str1 ,y, 1) 
+		if eachchar = eachchar2 then 
+			charcount ← charcount + 1
+		endif  
+		if charcount > maxcharvalue then 
+			maxcharvalue ← charcount 
+			maxchar ← eachchar
+		endif
+	Next y
+	charcount ← 0	
+Next i	
+
+//output 
+output ("most repeated character: ", maxchar)
+output ("(EXTRA) number of times repeated: ", maxcharvalue)
+
+
+
+
+
+

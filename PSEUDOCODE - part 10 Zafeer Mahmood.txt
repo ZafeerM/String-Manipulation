@@ -1,0 +1,44 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+10.
+verbing:
+Given a string, if its length is at least 3,
+add 'ing' to its end.
+Unless it already ends in 'ing', in which case
+add 'ly' instead.
+If the string length is less than 3, leave it unchanged.
+Return the resulting string.
+examples:
+input 'end' --> 'ending'
+input 'ending' --> 'endingly'
+input 'go' --> 'go'
+
+------------------------------------
+//Pseudocode 
+------------------------------------
+//Declaration 
+Declare str1 as string 
+Declare finalstr as string 
+
+//intialization 
+str1 ← ""
+finalstr ← ""
+
+input ("Enter String: ", str1 )
+
+if len(str1) >= 3 then 
+	if RIGHT (str1, 3) = "ing" then 
+		finalstr ← str1 & "ly"
+		output finalstr
+	else
+		finalstr ← str1 & "ing"
+		output finalstr
+	endif
+else 
+	output str1
+endif
+
+
+		

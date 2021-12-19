@@ -1,0 +1,55 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+11.
+not_bad:
+Given a string, find the first appearance of the
+substring 'not' and 'bad'. If the 'bad' follows
+the 'not', replace the whole 'not'...'bad' substring
+with 'good'.
+Return the resulting string.
+Input: 'This dinner is not that bad!' 
+Outputs: This dinner is good!
+
+------------------------------------
+//visualbasic 
+------------------------------------
+
+Module Module1
+
+    Sub Main()
+        'declaration 
+        Dim str1 As String
+        Dim find1 As Integer
+        Dim find2 As Integer
+        Dim finalstr As String
+
+        'intialization 
+        str1 = ""
+        find1 = 0
+        find2 = 0
+        finalstr = ""
+
+        Console.Write("Enter String: ")
+        str1 = Console.ReadLine()
+
+        find1 = InStr(str1, " not ")
+        find2 = InStr(str1, " bad")
+
+        If find2 > find1 Then
+            finalstr = Left(str1, find1) & "good" & Mid(str1, find2 + 4, Len(str1))
+            Console.WriteLine(finalstr)
+        Else
+            Console.WriteLine("Word 'bad' doesnot follows the word 'not' ")
+        End If
+
+        Console.ReadKey()
+
+    End Sub
+
+End Module
+
+
+
+		

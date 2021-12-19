@@ -1,0 +1,48 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+8.
+fix_start:
+Given a string s, return a string
+where all occurences of its first char have
+been changed to '*', except do not change
+the first char itself.
+e.g., 'babble' yields 'ba**le' or 'alpha' outputs 'alph*'
+Assume that the string is length 1 or more
+
+------------------------------------
+//visualbasic 
+------------------------------------
+
+Module Module1
+
+    Sub Main()
+        'declaration 
+        Dim str1 As String
+        Dim i As Integer
+        Dim eachchar As Char
+
+        'intialization 
+        str1 = ""
+        i = 0
+        eachchar = ""
+
+        Console.Write("Enter String: ")
+        str1 = Console.ReadLine()
+
+        For i = 2 To Len(str1)
+            eachchar = Mid(str1, i, 1)
+            If Mid(str1, 1, 1) = eachchar Then
+                str1 = Mid(str1, 1, i - 1) & "*" & Mid(str1, i + 1, Len(str1))
+            End If
+
+        Next
+        Console.WriteLine(str1)
+        Console.ReadKey()
+
+    End Sub
+
+End Module
+
+		

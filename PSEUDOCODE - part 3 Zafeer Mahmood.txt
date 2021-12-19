@@ -1,0 +1,68 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+3. Count and output the NUMBER of an entered character in a string. Also output separate counts for alphabets (cap & small together; case neutral), digits and other characters in same entered string. 
+
+
+------------------------------------
+//Pseudocode 
+------------------------------------
+
+//declarations
+Declare str1 as string 
+Declare chartocount as char
+Declare eachchar as char
+Declare alphabets as string 
+Declare totalchar as integer
+Declare totalalpha as integer
+Declare totaldigit as integer
+Declare digits as string 
+Declare extrachar as integer
+
+//initialization 
+str1 ← ""
+chartocount ← ''
+eachchar ← ''
+alphabets ← "abcdefghijklmnopqrstuvwxyz"
+digits ← "0123456789"
+totalchar ← 0
+totalpha ← 0
+totaldigit ← 0
+extrachar ← 0
+
+//inputs
+input "Enter String: ", str1
+str1 ← LOWER(str1)
+input "Enter character to count: ", chartocount
+
+
+For i ← 1 to len(str1) 
+	eachchar ← MID (str1 ,i, 1)
+	if  eachchar = chartocount then
+		totalchar ← totalchar + 1 
+	endif
+	
+	if locate (alphabets, eachchar) > 0 then 
+		totalalpha ← totalalpha + 1	
+	elseif locate (digits, eachchar) > 0 then 
+		totaldigit ← totaldigit + 1
+	endif
+Next
+
+extrachar ← len(str1) - (totaldigit + totalalpha)
+
+//output
+output "Given character count: ",totalchar 
+output "Total alphabets: ",totalalpha
+output "Total digits: ",totaldigit
+output "Other characters (including spaces) : ", extrachar
+
+
+
+
+
+
+
+
+

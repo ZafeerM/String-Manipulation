@@ -1,0 +1,38 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+2. Replace selected character with another in entered string.
+
+------------------------------------
+//Pseudocode 
+------------------------------------
+
+//declartion 
+Declare str1 : string
+Declare chartochange : char
+Declare char1 : char
+Declare i : integer
+Declare eachchar : char
+
+//initialize
+str1 ← ""
+chartochange ← ''
+char1 ← ''
+i ← 0
+eachchar ← ''
+
+input "Enter String: ", str1
+input "Enter character to replace: ", chartochange
+input "Enter character to replace with: ", char1
+
+For i ← 1 to len(str1)
+	eachchar ← MID (str1 ,i, 1)
+	if eachchar = chartochange then
+		str1 ← MID (str1 ,1, i-1) + char1 + MID (str1 ,i+1, len(str1))
+	endif
+Next i 
+
+output str1
+		
+	 

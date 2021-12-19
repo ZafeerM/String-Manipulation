@@ -1,0 +1,74 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+3. Count and output the NUMBER of an entered character in a string. Also output separate counts for alphabets (cap & small together; case neutral), digits and other characters in same entered string. 
+
+------------------------------------
+//Visualbasic
+------------------------------------
+
+Module Module1
+
+    Sub Main()
+        'declaration 
+        Dim str1 As String
+        Dim chartocount As Char
+        Dim eachchar As Char
+        Dim alphabets As String
+        Dim totalchar As Integer
+        Dim totalalpha As Integer
+        Dim totaldigit As Integer
+        Dim digits As String
+        Dim extrachar As Integer
+
+        'initialization 
+        str1 = ""
+        chartocount = ""
+        eachchar = ""
+        alphabets = "abcdefghijklmnopqrstuvwxyz"
+        totalchar = 0
+        totalalpha = 0
+        totaldigit = 0
+        digits = "0123456789"
+        extrachar = 0
+
+        'input
+        Console.Write("Enter String: ")
+        str1 = Console.ReadLine
+        str1 = LCase(str1)
+
+        Console.Write("Enter character to count: ")
+        chartocount = Console.ReadLine
+
+        For i = 1 To Len(str1)
+            eachchar = Mid(str1, i, 1)
+            If eachchar = chartocount Then
+                totalchar = totalchar + 1
+            End If
+
+            If InStr(alphabets, eachchar) > 0 Then
+                totalalpha = (totalalpha + 1)
+            ElseIf InStr(digits, eachchar) > 0 Then
+                totaldigit = totaldigit + 1
+            End If
+        Next
+
+        extrachar = Len(str1) - (totaldigit + totalalpha)
+
+        'outputs
+        Console.WriteLine("Given character count: " & totalchar)
+        Console.WriteLine("Total alphabets: " & totalalpha)
+        Console.WriteLine("Total digits: " & totaldigit)
+        Console.WriteLine("Other characters (including spaces) : " & extrachar)
+
+        Console.ReadKey()
+    End Sub
+
+End Module
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+BCCG AS Level String Manipulation Assignment:
+Zafeer Mahmood
+AS-C
+
+9.
+MixUp:
+Given strings a and b, return a single string with a and b separated
+by a space '<a> <b>', except swap the first 2 chars of each string.
+e.g.
+  'mix', pod' -> 'pox mid'
+  'dog', 'dinner' -> 'dig donner'
+  Assume a and b are length 2 or more.
+
+------------------------------------
+//visualbasic 
+------------------------------------
+
+Module Module1
+
+    Sub Main()
+        'declaration 
+        Dim stra As String
+        Dim strb As String
+        Dim str2a As String
+        Dim str2b As String
+        Dim finalstr As String
+
+        'intialization 
+        stra = ""
+        strb = ""
+        str2a = ""
+        str2b = ""
+        finalstr = ""
+
+        Console.Write("Enter String a: ")
+        stra = Console.ReadLine()
+        Console.Write("Enter String b: ")
+        strb = Console.ReadLine()
+
+        str2a = Left(stra, 2)
+        str2b = Left(strb, 2)
+
+        finalstr = str2b & Right(stra, Len(stra) - 2) & " " & str2a & Right(strb, Len(strb) - 2)
+
+        Console.WriteLine(finalstr)
+        Console.ReadKey()
+    End Sub
+
+End Module
+
+		
